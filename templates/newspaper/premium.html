@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+{% load static %}
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>The News Paper</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+  <!-- Custom styles for this template -->
+  <link href="{% static 'css/heroic-features.css' %}" rel="stylesheet">
+
+</head>
+  <script src="https://js.stripe.com/v3/"></script>
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="#">The News Paper</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="/">Home
+              <span class="sr-only">(current)</span>
+            </a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="premium">Premium News</a>
+          </li>
+          {% if user.is_authenticated %}
+          <li class="nav-item">
+            <a class="nav-link" href="#">Already logged in</a>
+          </li>
+          {% else %}
+             <li class="nav-item">
+            <a class="nav-link" href="../accounts/login">Login</a>
+          </li>
+          {% endif %}
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Page Content -->
+  <div class="container">
+
+    <!-- Jumbotron Header -->
+    <header class="jumbotron my-4">
+      <h1 class="display-3">Premium News!</h1>
+      {% if not user.is_authenticated%}
+        <p class="lead">Please login to read premium news!</p>
+      {% else%}
+          {% if not user_premium %}
+              <p class="lead">You must pay the subscription in order to visi premium news</p>
+              <button id="submitBtn" class="btn btn-primary">Subscribe now!</button>
+          {% else %}
+              <p class="lead">Enjoy premium news!</p>
+          {% endif %}
+      {% endif %}
+    </header>
+
+    <!-- Page Features -->
+    <div class="row text-center">
+    {% if newses %}
+        {% for item in newses %}
+            <div class="col-lg-3 col-md-6 mb-4">
+                <div class="card h-100">
+                  <div class="card-body">
+                    <h4 class="card-title">{{ item.title }}</h4>
+                    <p class="card-text">{{ item.description }}</p>
+                  </div>
+                  <div class="card-footer">
+                    {% if user.is_authenticated %}
+                        <a href="#" class="btn btn-primary">Find Out More!</a>
+                    {% else %}
+                      <a href="/accounts/login" class="btn btn-primary">Find Out More!</a>
+                    {% endif %}
+                  </div>
+                </div>
+            </div>
+        {% endfor %}
+    {% endif %}
+    </div>
+    <!-- /.row -->
+
+  </div>
+  <!-- /.container -->
+
+  <!-- Footer -->
+  <footer class="py-5 bg-dark">
+    <div class="container">
+      <p class="m-0 text-center text-white">Copyright &copy; Your Website 2020</p>
+    </div>
+    <!-- /.container -->
+  </footer>
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="{% static 'vendor/jquery/jquery.min.js"' %}></script>
+  <script src="{% static 'vendor/bootstrap/js/bootstrap.bundle.min.js"' %}></script>
+  <script src="{% static 'main.js' %}"></script>
+</body>
+
+</html>
