@@ -1,5 +1,10 @@
-document.querySelector("#successPayment").addEventListener("click", () => {
+let paymentBtn = document.getElementById('successPayment');
+if(paymentBtn) {
+    paymentBtn.addEventListener("click", () => {
     // Get Checkout Session ID
     fetch("/premiumNewsSuccess/")
-    .then((result) => {});
+    .then((result) => {
+        window.location.href = '/premium';
+    });
   });
+}

@@ -1,5 +1,6 @@
+{% extends "account/base.html" %}
 
-{% extends "newspaper/base.html" %}
+{% load i18n %}
 
 {% block navigation %}
     <!-- Navigation -->
@@ -14,11 +15,7 @@
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item">
                         <a class="nav-link" href="/">Home
-                            <span class="sr-only">(current)</span>
                         </a>
-                    </li>
-                    <li class="nav-item active">
-                        <a class="nav-link" href="#">Premium News</a>
                     </li>
                 </ul>
             </div>
@@ -28,18 +25,19 @@
 
 {% block content %}
 
-      <!-- Page Content -->
-  <div class="container">
+    <!-- Page Content -->
+    <div class="container">
 
-    <!-- Jumbotron Header -->
-    <header class="jumbotron my-4">
-      <h1 class="display-3">Thank You!</h1>
-      <p class="lead">You are all set for your premium news</p>
-        <button id="successPayment" class="btn btn-primary">Go to News!</button>
-    </header>
-    <!-- /.row -->
+        <!-- Jumbotron Header -->
+        <header class="jumbotron my-4">
+            <h1 class="display-3">{% trans "Verify Your E-mail Address" %}</h1>
+            <p class="lead">
+            <p>{% blocktrans %}We have sent an e-mail to you for verification. Follow the link provided to finalize the
+                signup process. Please contact us if you do not receive it within a few minutes.{% endblocktrans %}</p>
 
-  </div>
-  <!-- /.container -->
+        </header>
+
+    </div>
+
 
 {% endblock %}

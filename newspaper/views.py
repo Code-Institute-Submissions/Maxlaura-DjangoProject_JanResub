@@ -36,13 +36,11 @@ def get_premium_news (request):
     }
     return render(request, "newspaper/premium.html", context)
 
-@csrf_exempt
 def stripe_config(request):
     if request.method == 'GET':
         stripe_config = {'publicKey': settings.STRIPE_PUBLISHABLE_KEY}
         return JsonResponse(stripe_config, safe=False)
 
-@csrf_exempt
 def checkout_session(request):
     if request.method == 'GET':
         domain_url = 'https://newsdemoapp.herokuapp.com/'
