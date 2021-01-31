@@ -42,11 +42,11 @@
         <header class="jumbotron my-4">
             <h1 class="display-3">Premium News!</h1>
             {% if not user.is_authenticated %}
-                <p class="lead">Please login or signup in order to take the subscription to read premium newses!</p>
+                <p class="lead">Please login or signup in order to subscribe to read premium news!</p>
                 <a href="/accounts/login" class="btn btn-primary">Login</a>
             {% else %}
                 {% if not user_premium %}
-                    <p class="lead">You must pay the subscription in order to visit premium news</p>
+                    <p class="lead">You must pay the subscription in order to see premium news</p>
                     <button id="submitBtn" class="btn btn-primary">Subscribe now!</button>
                 {% else %}
                     <p class="lead">Enjoy premium news!</p>
