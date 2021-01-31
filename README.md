@@ -2,11 +2,11 @@
 
 ## Overview
 
-[The News Paper](https://newsdemoapp.herokuapp.com/) is a concept website where user is able to read the latest news published by the journalistic editorial staff.
+[The News Paper](https://newsdemoapp.herokuapp.com/) is a concept website where user is able to read the latest news published by the journalist editorial staff.
 
-The platform offers also Premium news under a monthly payment fee. The concept is that not all news area freely readable, there can be also "specific" news wich are under payment. 
+The platform also offers a Premium news section for a monthly payment fee. The concept is that not all news is freely readable, there is also "specific" news that readers can access against payment. 
 
-The news are dispayed using table for a fully responsive and mobile friendly website.
+The news is dispayed using table for a fully responsive and mobile friendly website.
 
 ------
 
@@ -16,17 +16,17 @@ The news are dispayed using table for a fully responsive and mobile friendly web
 
 ### User
 
-As a user what i am able to do?
+What am I able to do as a user?
 
 - Access the free news displayed on the home page
 - Create a new account
 - Login into your existing account
-- Subscribe with for the Premium news under a montly fee
+- Subscribe for the Premium news for a montly fee
 - Get access to exclusive Premium News
 
 ### Design
 
-The project is very clean, user have the main and core functionality availlable on a responsive web application. The goal was to keep it as clean as possibile avoiding user on doing mistakes using the app.
+The project is very clean, user has the main and core functionality availlable on a responsive web application. The goal was to keep it as clean as possibile for avoiding user  doing mistakes using the app.
 
 ### Wireframes
 
@@ -49,7 +49,7 @@ The project wireframes was build using wireframe.cc. An online free tool for onl
 
 ### Code structure
 
-The project code structure is showed below. It tries to be as clean as possibile.
+The project code structure is showed below. It aims to be as clean as possibile.
 
 ```bash
 .
@@ -81,7 +81,7 @@ The project code structure is showed below. It tries to be as clean as possibile
 ```
 
 ### Database structure
-Everything is based on SQLite3 DB, the main db is hosted on free tire.
+Everything is based on SQLite3 DB, the main db is hosted on free tier.
 There are 2 main collections: "Users" and "News"
 
 User:
@@ -138,29 +138,29 @@ The following list contains used technology for this project.
 
 ## Testing
 
-This is the list of testing has done on the web application.
+This is the list of testing performed on the web application.
 
 ### W3C Validation
-A W3C HTML validation test has done on the website wich can be found [here](https://validator.w3.org/nu/?doc=https%3A%2F%2Fnewsdemoapp.herokuapp.com%2F) to check out if everything is correct and no errors appears.
+A W3C HTML validation test was performed on the website wich can be found [here](https://validator.w3.org/nu/?doc=https%3A%2F%2Fnewsdemoapp.herokuapp.com%2F) to check out if everything is correct and no errors appear.
 
 ### User testing
-The list of tests that has been done:
-- Test insert a new news
-    - Test insert a new news with different data, this part is done into the /admin part of the web application
+The list of tests that have been done:
+- Test insert new news
+    - Test insert new news with different data, this part is done in the /admin part of the web application
 - Check the visibility of the inserted news
     - The last news inserted must appear first on the list of the news
-- Check the inserting also of premium newses
+- Check the inserting of premium news as well
 - Test the login
     - Check if fields are correclty validated
 - Check the signup
     - Check if fields are correclty validated
-    - Check if correctly received the signup email for email address confirmation
+    - Check if the signup email/email address confirmation correctly received 
     - Try to login after the signup
 - Access premium news
-    - Test if accessibility to premium news is locked until a correct payment
+    - Test if accessibility to premium news is locked until a correct payment is proccessed
 - Stripe montly payment
     - Test, after a login, to purchase the montly premium news, and if all redirects works correctly, website is currently on sandbox
-- Test if the website is responsive, open it with the browser and using mobile devices, also try to resize the window to see if the menu handles accordly.
+- Test if the website is responsive, open it with the browser and using mobile devices, also try to resize the window to see if the menu handles accordingly.
 
 
 
@@ -182,11 +182,11 @@ In order to contribute to this repository you will need to have the following in
 
 #### Development
 
-How to local deploy the project.
+How to localy deploy the project.
 
 ##### Requirements
 
-After clonig the project to your local machine, you will need to install all the projects dependencies type `pip install -r requirements.txt`. If you add or update any new packages to the project use `pip freeze --local > requirements.txt ` to update the requirements.txt file with the new dependencies
+After cloning the project to your local machine, you will need to install all the projects dependencies type `pip install -r requirements.txt`. If you add or update any new packages to the project use `pip freeze --local > requirements.txt ` to update the requirements.txt file with the new dependencies
 
 ##### Environment Variables
 
@@ -202,7 +202,7 @@ You will need to setup the following environment variables.
 
 ##### Contribution
 
-- If you want to make changes on this project is better to use a different branch
+- If you want to make changes on this project it is reccomended to use a different branch
 - Use `git checkout -b <branchname>` to create a new branch and edit the files
 - If you are happy with the changes to use `git commit -m "my commit message"` to commit the changes.
 - Use `git push `to push the changes to the repository
@@ -210,5 +210,5 @@ You will need to setup the following environment variables.
 
 ##### Deployment
 
-You can easely pull request on this project on master banch. If accepted all the edits that was made, will be deployed to Heroku. You can run your own heroku application by creating an account on the Heroku website and following the tutorial on how to deploy a Python project wich can be find here: https://devcenter.heroku.com/articles/getting-started-with-python 
+You can easily pull request on this project on master branch. If accepted, all the edits that were made, will be deployed to Heroku. You can run your own heroku application by creating an account on the Heroku website and following the tutorial on how to deploy a Python project which can be found here: https://devcenter.heroku.com/articles/getting-started-with-python 
 For questions or errors, i suggest use StackOverflow or simply ask here. A Stripe account is also needed in order to test the payment part.
