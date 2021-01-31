@@ -192,12 +192,12 @@ After clonig the project to your local machine, you will need to install all the
 
 You will need to setup the following environment variables.
 
-DATABASE_URL : This is the URI to connect to the databse
-EMAIL_HOST_USER : Host account for sending the signin emails
-EMAIL_HOST_PASSWORD : Host account password for sendint signin emails
-SECRET_KEY : Your secret key
-STRIPE_PUBLISHABLE_KEY : For Stipe payments, you can find in your stripe account
-STRIPE_SECRET_KEY : For Stripe paymens, you can find in your stripe account
+* DATABASE_URL : This is the URI to connect to the databse
+* EMAIL_HOST_USER : Host account for sending the signin emails
+* EMAIL_HOST_PASSWORD : Host account password for sendint signin emails
+* SECRET_KEY : Your secret key
+* STRIPE_PUBLISHABLE_KEY : For Stipe payments, you can find in your stripe account
+* STRIPE_SECRET_KEY : For Stripe paymens, you can find in your stripe account
 
 
 ##### Contribution
