@@ -2,7 +2,7 @@
 
 ## Overview
 
-[The News Paper](https://veterinary-app-demo.herokuapp.com/index) is a concept website where user is able to read the latest news published by the journalistic editorial staff.
+[The News Paper](https://newsdemoapp.herokuapp.com/) is a concept website where user is able to read the latest news published by the journalistic editorial staff.
 
 The platform offers also Premium news under a monthly payment fee. The concept is that not all news area freely readable, there can be also "specific" news wich are under payment. 
 
